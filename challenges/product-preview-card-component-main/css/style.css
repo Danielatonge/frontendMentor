@@ -1,0 +1,88 @@
+body {
+  padding: 12px 24px;
+  color: hsl(228deg, 12%, 48%);
+  background-color: hsl(30deg, 38%, 92%);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+.card {
+  border-radius: 10px;
+  background: #efefef;
+  overflow: hidden;
+}
+.card .card__image {
+  height: 300px;
+  width: 100%;
+  background-image: url("../images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.card .card__content {
+  padding: 15px 30px;
+  background-color: hsl(0deg, 0%, 100%);
+}
+.card .card__content .card__label {
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+.card .card__content .card__title {
+  color: hsl(212deg, 21%, 14%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
+.card .card__content .card__desc {
+  line-height: 24px;
+}
+.card .card__content .card__price {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.card .card__content .card__price > .active {
+  color: hsl(158deg, 36%, 37%);
+  font-weight: 700;
+  font-family: "Fraunces", serif;
+  font-size: 40px;
+}
+.card .card__content .card__price > .sale {
+  margin-left: 30px;
+  text-decoration: line-through;
+}
+.card .card__content .card__button {
+  width: 100%;
+  padding: 20px 0;
+  border-radius: 10px;
+  background-color: hsl(158deg, 36%, 37%);
+  border: 0;
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+@media (min-width: 375px) {
+  .card {
+    display: flex;
+    max-width: 700px;
+    justify-content: space-evenly;
+  }
+  .card .card__image {
+    background-image: url("../images/image-product-desktop.jpg");
+    background-size: cover;
+    height: 100%;
+    flex: 1;
+  }
+  .card .card__content {
+    flex: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

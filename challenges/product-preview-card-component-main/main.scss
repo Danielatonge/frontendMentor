@@ -2,7 +2,7 @@
 $primary-dc: hsl(158, 36%, 37%);
 $primary-c: hsl(30, 38%, 92%);
 $neutral-vdb: hsl(212, 21%, 14%);
-$neutral-dgb: hsl(228,12%,48%);
+$neutral-dgb: hsl(228, 12%, 48%);
 $neutral-w: hsl(0, 0%, 100%);
 
 // Fonts
@@ -10,36 +10,49 @@ $fontSize: 14px;
 $fontFamilyFraunces: 'Fraunces', serif;
 $fontFamilyMon: 'Montserrat', sans-serif;
 
+* *::before *::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body {
     background-color: $primary-c;
     font-size: $fontSize;
     font-family: $fontFamilyMon;
-}
-
-main {
-    padding: 12px 24px;
     color: $neutral-dgb;
-   
-    
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-self: center;
+    align-items: center;
+    padding: 30px;
 }
-
-
 
 .card {
     border-radius: 10px;
-    background: #efefef;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    .card__image--mobile {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .card__image--desktop {
+        display: none;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
 
     .card__image {
         height: 300px;
         width: 100%;
-        background-image: url('../images/image-product-mobile.jpg');
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
     }
 
     .card__content {
@@ -65,7 +78,7 @@ main {
 
         .card__price {
             margin-bottom: 20px;
-            display:flex;
+            display: flex;
             align-items: center;
 
             >.active {
@@ -100,19 +113,29 @@ main {
 @media (min-width: 375px) {
 
     .card {
-           display: flex;
-            max-width: 700px;
-            justify-content: space-evenly;
-            .card__image {
-                background-image: url("../images/image-product-desktop.jpg");
-                background-size: cover;
-                height: 100%;
-                flex: 1;
-            }
+        max-width: 600px;
+        flex-flow: row nowrap;
 
-            .card__content {
-               flex: 1;
-            }
+
+        .card__image {
+            height:auto;
+            width:auto;
+            flex-grow: 1;
         }
+
+        .card__image--desktop {
+            display: block;
+            width: 100%;
+        }
+
+        .card__image--mobile {
+            display: none;
+        }
+
+
+        .card__content {
+            flex: 1;
+        }
+    }
 
 }

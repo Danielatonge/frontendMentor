@@ -11,11 +11,16 @@ $fontFamilyFraunces: 'Fraunces', serif;
 $fontFamilyMon: 'Montserrat', sans-serif;
 
 body {
-    padding: 12px 24px;
-    color: $neutral-dgb;
     background-color: $primary-c;
     font-size: $fontSize;
     font-family: $fontFamilyMon;
+}
+
+main {
+    padding: 12px 24px;
+    color: $neutral-dgb;
+   
+    
     display: flex;
     justify-content: center;
     align-self: center;

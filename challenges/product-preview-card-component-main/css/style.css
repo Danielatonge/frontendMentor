@@ -39,10 +39,12 @@ body {
 .card .card__image {
   height: 300px;
   width: 100%;
+  min-width: 158px;
 }
 .card .card__content {
   padding: 15px 30px;
   background-color: hsl(0deg, 0%, 100%);
+  min-width: 158px;
 }
 .card .card__content .card__label {
   text-transform: uppercase;
@@ -61,6 +63,7 @@ body {
 .card .card__content .card__price {
   margin-bottom: 20px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 .card .card__content .card__price > .active {
@@ -94,7 +97,7 @@ body {
   .card .card__image {
     height: auto;
     width: auto;
-    flex-grow: 1;
+    flex: 1;
   }
   .card .card__image--desktop {
     display: block;

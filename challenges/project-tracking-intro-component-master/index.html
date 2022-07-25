@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+</head>
+
+<body>
+  <div class="main-container">
+    <nav class="navigation-bar">
+      <div class="logo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <g fill="#323334" fill-rule="evenodd">
+            <path d="M0 32V.241h23.041zM31.15 32V.241h-4.411L17.48 13.158zM3.645 32l11.854-15.879L27.353 32z" />
+          </g>
+        </svg>
+      </div>
+
+      <ul class="desktop-nav">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#" class="login">Login</a></li>
+      </ul>
+
+      <div class="nav-icons">
+        <!-- Close Icon -->
+        <svg class="close-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+          <path fill="#242942" fill-rule="evenodd"
+            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z" />
+        </svg>
+
+        <!-- Hamburger Icon -->
+        <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="16">
+          <g fill="#242942" fill-rule="evenodd">
+            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+          </g>
+        </svg>
+      </div>
+      <ul class="mobile-dropdown">
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#" class="login">Login</a></li>
+      </ul>
+
+    </nav>
+    <main>
+      <div class="container">
+        <div class="left">
+          <h5 class="mini-heading"> <span class="note">New</span>
+            Monograph Dashboard</h5>
+          <h1 class="heading">
+            Powerful insights into your team
+          </h1>
+          <p class="description">
+            Project planning and time tracking for agile teams
+          </p>
+          <div class="action-buttons">
+            <button class="btn-primary">
+              Schedule a demo
+            </button>
+
+            <button class="mini-heading btn-secondary">
+              To see a preview
+            </button>
+          </div>
+        </div>
+        <div class="image right">
+          <img class="illustration" src="./images/illustration-devices.svg" />
+        </div>
+      </div>
+    </main>
+
+
+
+  </div>
+  <script>
+    const navIconElement = document.querySelector(".nav-icons");
+    const navBarElement = document.querySelector("nav");
+    navIconElement.addEventListener("click", () => {
+      navBarElement.classList.toggle('show-mobile-nav');
+      console.log("CHANGED");
+    })
+  </script>
+</body>
+
+</html>

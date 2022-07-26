@@ -8,10 +8,10 @@ export const AppCard = ({ jobPost, skillClicked }) => {
         (<span className="bg-desaturated_dark_cyan text-white rounded-full px-3 pt-2 pb-1 font-bold uppercase">New!</span>)
     const featureTag = featured && (<span className="bg-very_dark_grayish_cyan text-white rounded-full px-3 pt-2 pb-1 ml-2 font-bold uppercase">Featured</span>)
 
-
+    const isFeatured = featured && 'border-l-4';
     return (
 
-        <div className="bg-white rounded-md px-6 pt-10 pb-6 border-l-4 border-desaturated_dark_cyan relative shadow-lg md:flex md:flex-row md:items-center md:py-8 md:px-9">
+        <div className={`bg-white rounded-md px-6 pt-10 pb-6 ${isFeatured} border-desaturated_dark_cyan relative shadow-lg md:flex md:flex-row md:items-center md:py-8 md:px-9`}>
             <img className="absolute -top-7 w-14 md:relative md:top-0 md:w-24" src={logo} alt="company logo" />
             <div className="md:ml-6">
                 <div className="flex items-center mb-4">

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+@layer base {
+  :root {
+    --desaturated_dark_cyan: 180deg 29%  50%;
+    --bg_light_grayish_cyan: 180deg 52%  96%;
+    --light_grayish_cyan: 180deg 31%  95%;
+    --dark_grayish_cyan: 180deg 8% 52%;
+    --very_dark_grayish_cyan: 180deg 14%  20%;
+  }
+
+  html {
+    font-family: 'League Spartan', system-ui, sans-serif;
+    line-height: 1;
+  }
+  
+  html, 
+  body,
+  #root {
+    height: 100%;
+  }
+}
+
+.nothing {
+  --desaturated_dark_cyan: hsl(180, 29%,  50%);
+  --bg_light_grayish_cyan: hsl(180, 52% , 96%);
+  --light_grayish_cyan: hsl(180, 31%,  95%);
+  --dark_grayish_cyan: hsl(180, 8%, 52% );
+  --very_dark_grayish_cyan: hsl(180, 14% , 20%);
+}
+
+
